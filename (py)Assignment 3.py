@@ -1,0 +1,118 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Sun Oct 16 12:16:43 2022
+
+@author: faith
+"""
+#Conditional exercise
+
+#1
+response = '1'
+if response == '1' or response == '2':
+    print("OK")
+elif response == "NaN": 
+    print("subject did not respond")
+else:
+    print("subject pressed the wrong key")
+ #2   
+response = 'go'
+if response == '1' or response == '2':
+    print("OK")
+    if response =='1':
+        print("Correct!")
+    elif response == '2':
+        print("Incorrect!")    
+elif response == "NaN": 
+    print("subject did not respond")
+else:
+    print("subject pressed the wrong key")
+#    question 3 
+# Yes it deos what I want it to do:
+#     when response = '1', I get: OK Correct!
+#     when response = '2', I get: OK Incorrect!
+#     when response = 'NaN' I get: subject did not respond
+#     when response = 'go' I get: subject presses the wrong key
+
+
+#For Loop exercise:
+    
+#Number #1.)
+names = ['f', 'a', 'i', 't', 'h' ]
+for name in names: 
+    print(name)
+#or
+myname = 'Faith'
+for name in myname:
+    print(name)
+#printed each letter (both methods work)
+
+#Number #2.)
+myname = 'Faith'
+count = -1 #it'll start at -1 to start indexing at 0 within the loop
+for name in myname:
+    count = count+1 #every time the loop restarts add 1 to the count
+    print(name)
+    print("This letter has an index of %i" %count)
+
+#Number #3.)
+names = ["Amy", "Rory", "River"]
+for name in names:  #so go through each name 
+    for letter in name:     #spell each letter
+        print(letter)   #then loop back up to the next name
+
+#Number #4.)
+names = ["Amy", "Rory", "River"]
+for name in names:  #so go through each name 
+    count = -1
+    for letter in name:     #spell each letter
+        count = count+1
+        print(letter) #then loop back up to the next name
+        print("This letter has an index of %i" %count)
+
+
+#WHILE LOOP EXERCISES
+counter = 0
+while counter < 20: 
+#loop of 20 
+    if counter < 10: #when counter is less than 10
+        print('image1')
+    else:
+        print('image2')
+    counter = counter+1
+    
+#question 2
+import random
+# while loop
+one_or_two = False # will make true if response is 1 or 2
+iteration = 0
+while one_or_two == False:
+    response = random.randint(0,10)
+    print("Randomly generated response is %i" %response)
+    if(response == 1 or response == 2): #if the generator generates a 1 or 2
+        one_or_two=True
+    else:
+        print("image%i.png" %iteration)
+    iteration = iteration + 1
+    #question 3
+    
+import random
+
+# while loop
+one_or_two = False # will make true if response is 1 or 2
+iteration = 0
+while one_or_two == False:
+    response = random.randint(0,10)
+
+    print("Randomly generated response is %i" %response)
+    if(response == 1 or response == 2): #if the generator generates a 1 or 2
+        one_or_two=True
+    else:
+        print("image%i.png\n" %iteration)
+    
+    
+    iteration = iteration + 1
+    if(iteration == 5):
+        break   
+
+    
